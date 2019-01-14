@@ -5,7 +5,7 @@
 var Suite = require('../../lib/suite');
 var Test = require('../../lib/test');
 var Runner = require('../../lib/runner');
-var RUNNER_EVENT_END = Runner.constants.RUNNER_EVENT_END;
+var EVENT_RUN_END = Runner.constants.EVENT_RUN_END;
 
 describe('a test that throws', function() {
   var suite;
@@ -34,7 +34,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -48,7 +48,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -64,7 +64,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -80,7 +80,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -94,7 +94,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -112,7 +112,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -128,7 +128,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -142,7 +142,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
@@ -158,7 +158,7 @@ describe('a test that throws', function() {
       });
       suite.addTest(test);
       runner = new Runner(suite);
-      runner.on(RUNNER_EVENT_END, function() {
+      runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
         expect(test.state, 'to be', 'failed');
         done();
