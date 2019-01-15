@@ -1,16 +1,16 @@
 'use strict';
 
-var mocha = require('../../lib/mocha');
-var Suite = mocha.Suite;
-var Runner = mocha.Runner;
-var Test = mocha.Test;
-var Hook = mocha.Hook;
+var Mocha = require('../../lib/mocha');
+var Suite = Mocha.Suite;
+var Runner = Mocha.Runner;
+var Test = Mocha.Test;
+var Hook = Mocha.Hook;
 var path = require('path');
-var noop = mocha.utils.noop;
-var constants = Runner.constants;
-var EVENT_TEST_FAIL = constants.EVENT_TEST_FAIL;
-var EVENT_TEST_RETRY = constants.EVENT_TEST_RETRY;
-var EVENT_RUN_END = constants.EVENT_RUN_END;
+var noop = Mocha.utils.noop;
+var EVENT_TEST_FAIL = Runner.constants.EVENT_TEST_FAIL;
+var EVENT_TEST_RETRY = Runner.constants.EVENT_TEST_RETRY;
+var EVENT_RUN_END = Runner.constants.EVENT_RUN_END;
+var STATE_FAILED = Test.constants.STATE_FAILED;
 
 describe('Runner', function() {
   var suite;
@@ -240,7 +240,7 @@ describe('Runner', function() {
     it('should set test.state to "failed"', function() {
       var test = new Test('some test', noop);
       runner.fail(test, 'some error');
-      expect(test.state, 'to be', 'failed');
+      expect(test.state, 'to be', STATE_FAILED);
     });
 
     it('should emit "fail"', function(done) {

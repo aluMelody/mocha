@@ -6,6 +6,7 @@ var Suite = require('../../lib/suite');
 var Test = require('../../lib/test');
 var Runner = require('../../lib/runner');
 var EVENT_RUN_END = Runner.constants.EVENT_RUN_END;
+var STATE_FAILED = Test.constants.STATE_FAILED;
 
 describe('a test that throws', function() {
   var suite;
@@ -36,7 +37,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -50,7 +51,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -66,7 +67,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -82,7 +83,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -96,7 +97,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -114,7 +115,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -130,7 +131,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -144,7 +145,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
@@ -160,7 +161,7 @@ describe('a test that throws', function() {
       runner = new Runner(suite);
       runner.on(EVENT_RUN_END, function() {
         expect(runner.failures, 'to be', 1);
-        expect(test.state, 'to be', 'failed');
+        expect(test.state, 'to be', STATE_FAILED);
         done();
       });
       runner.run();
